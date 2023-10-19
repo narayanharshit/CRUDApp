@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Edit Item {{ item.id }}</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Update Item</button>
+</form>
+<br>
+{% endblock %}
